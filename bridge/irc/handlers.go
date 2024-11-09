@@ -146,7 +146,8 @@ func (b *Birc) handleNewConnection(client *girc.Client, event girc.Event) {
 func (b *Birc) handleNickServ() {
 	if !b.GetBool("UseSASL") && b.GetString("NickServNick") != "" && b.GetString("NickServPassword") != "" {
 		b.Log.Debugf("Sending identify to nickserv %s", b.GetString("NickServNick"))
-		b.i.Cmd.Message(b.GetString("NickServNick"), "IDENTIFY "+b.GetString("NickServPassword"))
+		//b.i.Cmd.Message(b.GetString("NickServNick"), "IDENTIFY "+b.GetString("NickServPassword"))
+		b.i.Cmd.Message(b.GetString("NickServNick"), "NICKSERV "+b.GetString("NickServPassword"))
 	}
 	if strings.EqualFold(b.GetString("NickServNick"), "Q@CServe.quakenet.org") {
 		b.Log.Debugf("Authenticating %s against %s", b.GetString("NickServUsername"), b.GetString("NickServNick"))
