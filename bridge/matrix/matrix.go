@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/42wim/matterbridge/bridge"
-	"github.com/42wim/matterbridge/bridge/config"
-	"github.com/42wim/matterbridge/bridge/helper"
+	"github.com/yujintong/matterbridge/bridge"
+	"github.com/yujintong/matterbridge/bridge/config"
+	"github.com/yujintong/matterbridge/bridge/helper"
 	matrix "github.com/matterbridge/gomatrix"
 )
 
